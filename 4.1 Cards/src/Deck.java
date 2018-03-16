@@ -7,10 +7,28 @@ public class Deck
 	
 	public boolean isEmpty()
 	{
-		if 
+		int dealtcards = Dealt.size();
+		int undealtcards = unDealt.size();
+		if (dealtcards + undealtcards == 0)
+		{
+			return true;
+		}
+		else 
+		{
+			return false; 
+		}
+	}
+	public int size()
+	{
+		return unDealt.size();
 	}
 	
-	
+	public Card deal()
+	{
+		
+		unDealt.get(index);
+		unDealt.remove(index);
+	}
 	
 	
 	
@@ -33,5 +51,7 @@ public class Deck
 				unDealt.add(new Card(ranks[i],suits[j],pointValues[i]));
 			}
 		}
+		this.unDealt = unDealt;
+		this.Dealt = Dealt;
 	}
 }
